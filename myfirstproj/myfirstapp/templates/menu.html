@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="column">
+    {% for item in menu %}
+    <p>
+        {{ item.title }} - {{ item.description }}
+        {% if item.price %}
+        <span class="menu-price">{{ item.price }}</span>
+        {% else %}
+        <span class="menu-price">Price not available</span>
+        {% endif %}
+        <span class="menu-price"></span>
+    </p>
+    {% endfor %}
+</div>
+{% endblock %}

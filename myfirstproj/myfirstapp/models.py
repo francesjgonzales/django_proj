@@ -18,3 +18,11 @@ class Reservation(models.Model):
 
     def __str__(self):
         return f"{self.name} - {self.date.strftime('%Y-%m-%d %H:%M')}"
+    
+class Menu(models.Model):
+    title = models.CharField(max_length=100)
+    price = models.DecimalField(max_digits=6, decimal_places=2)
+    description = models.CharField(max_length=250, default='')
+
+    def __str__(self):
+        return self.title
