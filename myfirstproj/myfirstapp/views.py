@@ -30,6 +30,9 @@ def contact(request):
 def services(request):              
     return render(request, 'services.html')
 
+def reservation(request):              
+    return render(request, 'reservation.html')
+
 
 # Create class based views
 class MyView(View):
