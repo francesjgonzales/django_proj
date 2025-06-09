@@ -82,10 +82,14 @@ adding and updating models.py, always run this code to process and update the da
 
 ### File directory
 
-Project Root Folder
-|-- app folder
-|--|-- views.py (logic part)
-|--|-- urls.py (map url)
-|-- project app folder
-|--|-- urls.py (assign url set on app level)
-|--|-- settings.py (add the app under INSTALLED_APPS)
+project/
+├── myfirstproj/
+│ └── templates
+│ └── migrations
+│ └── static/
+│ │ └── css
+│ │ └── img
+└── myfirstapp/
+│ └── settings.py
+│ └── urls.py
+└── manage.py

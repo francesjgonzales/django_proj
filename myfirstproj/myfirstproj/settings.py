@@ -30,7 +30,7 @@ DB = os.getenv('DATABASE_URL')
 DEBUG = os.getenv('DEBUG', 'False') == 'False'
 
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.onrender.com']
 
 
 # Application definition
@@ -61,7 +61,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'templates', 'partials')],  # Directory for templates
+            os.path.join(BASE_DIR, 'templates')],  # Directory for templates
         # Ensure you have a 'templates' directory in your project root  
         'APP_DIRS': True,
         'OPTIONS': {
@@ -128,8 +128,10 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
+STATIC_URL = "static/"
+# The directory where static files will be collected
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
